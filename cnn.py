@@ -64,7 +64,6 @@ with torch.no_grad():
 
 print("Accuracy:", 100 * correct / len(test), "%")
 
-# Show 5 predictions
 x, y = next(iter(test_loader))
 with torch.no_grad():
     pred = model(x.to(device)).argmax(1).cpu()
